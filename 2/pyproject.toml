@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fastapi-lab"
+version = "0.1.0"
+description = ""
+authors = ["adrian <maccree.a@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.103.1"
+pyjokes = "^0.6.0"
+uvicorn = "^0.23.2"
+pydantic = "^2.4.0"
+wikipedia-api = "^0.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
