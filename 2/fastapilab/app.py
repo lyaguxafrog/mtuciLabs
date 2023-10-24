@@ -4,7 +4,7 @@ from typing import Optional
 import wikipediaapi
 import pyjokes
 
-from fastapilab import app
+app = FastAPI()
 
 class Joke(BaseModel):
     friend: str
@@ -61,3 +61,21 @@ def search_by_body(article: Article):
         data = e.options
     return data, status.HTTP_200_OK
 
+@app.get("/from_path/{equation}")
+def search_by_path(request: Request, equation: str):
+    
+    for equation in equation.split():
+        if equation != "":
+            try:
+                equation = equation.replace(':', '/')
+                data = eval(equation)
+            except:
+                data = "ошибка в математическом выражении!"
+                return data, status.HTTP_400_BAD_REQUEST
+            return data, status.HTTP_200_OK
+
+    return status.HTTP_500_INTERNAL_SERVER_ERROR
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port="8001")
