@@ -1,0 +1,30 @@
+[
+    {
+        "worker_id": 1,
+        "shop_id": 101,
+        "name": "Иван Иванов",
+        "salary": 50000,
+        "position": "Менеджер"
+    },
+    {
+        "worker_id" :2,
+        "shop_id": 102,
+        "name": "Мария Петрова",
+        "salary": 60000,
+        "position": "Продавец"
+    },
+    {
+        "worker_id": 3,
+        "shop_id": 101,
+        "name": "Александр Сидоров",
+        "salary": 55000,
+        "position": "Кассир"
+    },
+    {
+        "worker_id": 4,
+        "shop_id": 103,
+        "name": "Екатерина Иванова",
+        "salary": 48000,
+        "position": "Продавец"
+    }
+]
