@@ -1,0 +1,25 @@
+-- TABLE
+CREATE TABLE demo (ID integer primary key, Name varchar(20), Hint text );
+CREATE TABLE groups (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  description VARCHAR(255)
+);
+CREATE TABLE students (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(255),
+  group_id INTEGER NOT NULL
+);
+CREATE TABLE student_marks (
+  student_id INTEGER PRIMARY KEY,
+  math_mark_average FLOAT,
+  physics_mark_average FLOAT,
+  python_mark_average FLOAT
+);
+ 
+-- INDEX
+ 
+-- TRIGGER
+ 
+-- VIEW
+ 
